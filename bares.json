@@ -1,0 +1,81 @@
+{
+    "restaurantes": [
+      {
+        "nombre": "La Trattoria",
+        "direccion": "Calle Principal 123",
+        "tipo_comida": "Italiana",
+        "imagen": "https://example.com/images/la-trattoria.jpg",
+        "puntaje": 4.2
+      },
+      {
+        "nombre": "El Taquito Feliz",
+        "direccion": "Avenida Central 456",
+        "tipo_comida": "Mexicana",
+        "imagen": "https://example.com/images/el-taquito-feliz.jpg",
+        "puntaje": 4.8
+      },
+      {
+        "nombre": "Sakura Sushi",
+        "direccion": "Calle Secundaria 789",
+        "tipo_comida": "Japonesa",
+        "imagen": "https://example.com/images/sakura-sushi.jpg",
+        "puntaje": 3.9
+      },
+      {
+        "nombre": "Green Garden",
+        "direccion": "Avenida Principal 321",
+        "tipo_comida": "Vegetariana",
+        "imagen": "https://example.com/images/green-garden.jpg",
+        "puntaje": 4.5
+      },
+      {
+        "nombre": "El Asador Criollo",
+        "direccion": "Calle Peatonal 987",
+        "tipo_comida": "Parrilla",
+        "imagen": "https://example.com/images/el-asador-criollo.jpg",
+        "puntaje": 4.0
+      },
+      {
+        "nombre": "Café Paris",
+        "direccion": "Avenida Principal 555",
+        "tipo_comida": "Francesa",
+        "imagen": "https://example.com/images/cafe-paris.jpg",
+        "puntaje": 4.7
+      },
+      {
+        "nombre": "Burger House",
+        "direccion": "Calle Secundaria 222",
+        "tipo_comida": "Hamburguesas",
+        "imagen": "https://example.com/images/burger-house.jpg",
+        "puntaje": 4.3
+      },
+      {
+        "nombre": "El Ranchito",
+        "direccion": "Avenida Central 777",
+        "tipo_comida": "Mexicana",
+        "imagen": "https://example.com/images/el-ranchito.jpg",
+        "puntaje": 4.6
+      },
+      {
+        "nombre": "La Pizzería",
+        "direccion": "Calle Principal 999",
+        "tipo_comida": "Italiana",
+        "imagen": "https://example.com/images/la-pizzeria.jpg",
+        "puntaje": 4.1
+      },
+      {
+        "nombre": "Bocadillos Express",
+        "direccion": "Avenida Secundaria 444",
+        "tipo_comida": "Comida rápida",
+        "imagen": "https://example.com/images/bocadillos-express.jpg",
+        "puntaje": 4.9
+      },
+      {
+        "nombre": "El Rincón Mediterráneo",
+        "direccion": "Calle Central 666",
+        "tipo_comida": "Mediterránea",
+        "imagen": "https://example.com/images/el-rincon-mediterraneo.jpg",
+        "puntaje": 3.5
+      }
+    ]
+}

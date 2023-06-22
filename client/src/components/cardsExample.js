@@ -1,5 +1,5 @@
 import React from "react";
-import bares from '../../../bares';
+import bares from '../../bares';
 
 import { View, ScrollView, Text, StyleSheet, Image } from "react-native";
 

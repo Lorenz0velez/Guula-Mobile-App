@@ -5,7 +5,9 @@ import { LinearGradient } from "expo-linear-gradient";
 import FilterButtons from "../components/FilterButtons";
 import Card from "../components/Card";
 
-export default function Feed(){
+
+
+export default function FeedScreen(){
 
 
     const array = [];

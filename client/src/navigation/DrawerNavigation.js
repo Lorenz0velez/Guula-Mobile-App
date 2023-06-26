@@ -6,9 +6,9 @@ import { StyleSheet, Text, View } from 'react-native';
 // Importa tus pantallas/componentes
 import ProfileScreen from '../screens/ProfileScreen';
 import SettingsScreen from '../screens/SettingsScreen';
-import Feed from './Feed';
+import Feed from '../screens/Feed';
 import { TouchableOpacity } from 'react-native-gesture-handler';
-import MenuBotonItem from './MenuBotonItem';
+import MenuBotonItem from '../components/MenuBotonItem';
 
 const Drawer = createDrawerNavigator();
 

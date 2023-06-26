@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Text, View, StyleSheet, ScrollView, Button, TouchableOpacity } from "react-native";
 import SearchBar from "./SearchBar";
 import { LinearGradient } from "expo-linear-gradient";
@@ -19,6 +19,7 @@ export default function FilterButtons({text, onPress}){
   ]);
 
   return (
+    <View>
     <DropDownPicker
       open={open}
       value={value}
@@ -27,23 +28,10 @@ export default function FilterButtons({text, onPress}){
       setValue={setValue}
       setItems={setItems}
     />
+    </View>
   );
 }
     
 
 
-const styles = StyleSheet.create({
-    dropdowns:{
-
-    },
-    dropdown_menu:{
-
-    },
-    dropdown:{
-
-    },
-    button:{
-
-    }
-
-})
+const styles = StyleSheet.create({})

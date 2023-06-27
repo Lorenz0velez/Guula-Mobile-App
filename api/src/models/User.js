@@ -25,7 +25,15 @@ module.exports = (sequelize) => {
         type: DataTypes.STRING,
         allowNull: false,
       },
-      
+      preferences:{
+        type: DataTypes.STRING,
+      },
+      gmail:{
+        type: DataTypes.STRING
+      },
+      password:{
+        type: DataTypes.STRING
+      }
     },
     { timestamps: false }
   );

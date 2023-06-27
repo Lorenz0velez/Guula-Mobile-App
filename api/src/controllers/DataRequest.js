@@ -1,6 +1,6 @@
 const axios = require('axios');
-const { Bar } = require('../../DB_connection');
-const bar = require('../../../client/bares');
+const { Bar } = require('../DB_connection');
+const bar = require('../../../client/bares.json');
 axios.default.timeout = 30000;
 
 

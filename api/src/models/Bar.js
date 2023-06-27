@@ -5,7 +5,7 @@ module.exports = (sequelize) => {
     "Bar",
     {
       id: {
-        type: DataTypes.NUMBER, // "id": "GLQvEAAAQBAJ",
+        type: DataTypes.INTEGER, // "id": "GLQvEAAAQBAJ",
         allowNull: false,
         primaryKey: true,
         defaultValue: Math.floor((Math.random() * 1000))

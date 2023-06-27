@@ -17,18 +17,19 @@
 //     =====`-.____`.___ \_____/___.-`___.-'=====
 //                       `=---='
 //     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-const server = require('./app');
-const { conn } = require('./DB_connection');
+const server = require('./src/app');
+const { conn } = require('./src/DB_connection');
 const { getAllBares } = require('./src/controllers/DataRequest');
 // const axios = require('axios');
-require('dotenv').config() ;
+// require('dotenv').config() ;
+require('dotenv').config()
 
  
 
 // Syncing all the models at once.
 conn.sync({ force: true }).then(async() => {
   await getAllBares();
-  server.listen(process.env.PORT, () => {
-    console.log('%s listening at', process.env.PORT); // eslint-disable-line no-console
+  server.listen(80, () => {
+    console.log('%s listening at 80'); // eslint-disable-line no-console
   });
 });

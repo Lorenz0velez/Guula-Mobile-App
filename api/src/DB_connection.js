@@ -1,11 +1,11 @@
-require('dotenv').config();
+require('dotenv').config()
 const { Sequelize } = require('sequelize');
-const { DB_USER, DB_PASSWORD, DB_HOST, DB_NAME, DB_DEPLOY, DB_PORT } = process.env;
+const { DB_USER, DB_PASSWORD, DB_HOST, DB_NAME, DB_DEPLOY, DB_PORT, PORT } = process.env;
 
-const BarModel = require('./src/models/Bar');
-const ReviewsModel = require('./src/models/Reviews');
-const UserModel = require('./src/models/User');
-const FavouritesModel = require('./src/models/Favourites');
+const BarModel = require('./models/Bar');
+const ReviewsModel = require('./models/Reviews');
+const UserModel = require('./models/User');
+const FavouritesModel = require('./models/Favourites');
 
 const sequelize = new Sequelize(`postgres://${DB_USER}:${DB_PASSWORD}@${DB_HOST}:${DB_PORT}/${DB_NAME}`,
     {
@@ -42,5 +42,5 @@ Bar.belongsToMany(User, { through: "User_Bar" });
 
 module.exports = {
     ...sequelize.models,
-    sequelize
+    conn: sequelize,
 }

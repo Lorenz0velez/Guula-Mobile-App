@@ -8,7 +8,7 @@ import ProfileScreen from '../screens/ProfileScreen';
 import SettingsScreen from '../screens/SettingsScreen';
 import Feed from '../screens/Feed';
 import { TouchableOpacity } from 'react-native-gesture-handler';
-import MenuBotonItem from '../components/MenuBotonItem';
+import MenuBotonItem from './MenuBotonItem';
 
 const Drawer = createDrawerNavigator();
 

@@ -1,6 +1,6 @@
 import React from "react";
 import { SafeAreaView, FlatList, StyleSheet } from "react-native";
-import bares from "../../bares";
+import bares from "../../../bares";
 import Card from "./Card";
 
 export default function Slider() {

@@ -1,10 +1,9 @@
 import React from "react";
 import { Text, View, StyleSheet, ScrollView } from "react-native";
-import SearchBar from "../components/SearchBar";
+import SearchBar from "../components/Search/SearchBar";
 import { LinearGradient } from "expo-linear-gradient";
-import FilterButtons from "../components/FilterButtons";
-import Card from "../components/Card";
-import Slider from "../components/Slider";
+import Card from "../components/Feed/Card";
+import Slider from "../components/Feed/Slider";
 import bares from "../../bares";
 
 
@@ -39,6 +38,7 @@ export default function FeedScreen(){
                         name={bar.nombre}
                         price={'$999'}
                         rating={bar.puntaje}
+                        key={bar.id}
                         /> 
                     )
                 })

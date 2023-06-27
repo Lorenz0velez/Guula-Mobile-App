@@ -18,13 +18,24 @@ const Card = ({ image, name, price, rating, onSave }) => {
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: '#ffffff',
+    backgroundColor: 'grey',
     borderRadius: 10,
     padding: 10,
     marginBottom: 10,
     marginTop:10,
     elevation: 2,
-    height:320,
+    minHeight:320,
+    minWidth:320,
+    marginHorizontal:10,
+
+    // shadowColor: '#000',
+    // shadowOffset: {
+    //   width: 2,
+    //   height: 3,
+    // },
+    // shadowOpacity: 1,
+    // shadowRadius: 2,
+    // elevation: 2,
   },
   image: {
     width: '100%',

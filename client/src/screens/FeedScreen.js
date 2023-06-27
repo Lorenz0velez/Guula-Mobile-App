@@ -4,6 +4,8 @@ import SearchBar from "../components/SearchBar";
 import { LinearGradient } from "expo-linear-gradient";
 import FilterButtons from "../components/FilterButtons";
 import Card from "../components/Card";
+import Slider from "../components/Slider";
+import bares from "../../bares";
 
 
 
@@ -24,35 +26,23 @@ export default function FeedScreen(){
             </LinearGradient>
             <SearchBar/>
             <Text style={styles.textSubTitles}>NOVEDADES</Text>
+            <View style={styles.slider} >
+                <Slider/>
+            </View>
+
             <View>
-            <Card
-            image={'https://media.revistaad.es/photos/620cbc911db9f1841aebdf15/16:9/pass/portada.jpg'} 
-            name={'Tori Bar'}
-            price={'$5250'}
-            rating={4.8}
-            // onSave={()=> name.push(array)}
-            />
-            <Card
-            image={'https://www.shutterstock.com/image-photo/outdoor-empty-coffee-restaurant-terrace-260nw-1884717178.jpg'} 
-            name={'Pepecito Bar'}
-            price={'$5250'}
-            rating={4.8}
-            // onSave={()=> name.push(array)}
-            />
-            <Card
-            image={'https://media.revistaad.es/photos/620cbc911db9f1841aebdf15/16:9/pass/portada.jpg'} 
-            name={'Guulas Restourant'}
-            price={'$5250'}
-            rating={4.8}
-            // onSave={()=> name.push(array)}
-            />
-            <Card
-            image={'https://www.shutterstock.com/image-photo/outdoor-empty-coffee-restaurant-terrace-260nw-1884717178.jpg'} 
-            name={'Pepecito Bar'}
-            price={'$5250'}
-            rating={4.8}
-            // onSave={()=> name.push(array)}
-            />
+            {
+                bares.map((bar)=>{
+                    return(
+                        <Card
+                        image={'https://www.shutterstock.com/image-photo/outdoor-empty-coffee-restaurant-terrace-260nw-1884717178.jpg'} 
+                        name={bar.nombre}
+                        price={'$999'}
+                        rating={bar.puntaje}
+                        /> 
+                    )
+                })
+            }
             </View>
             
         </ScrollView>
@@ -84,7 +74,5 @@ const styles = StyleSheet.create({
         width: '100%',
         padding: 8,
         borderRadius:10,
-    }
-    
-    
+    },
 })

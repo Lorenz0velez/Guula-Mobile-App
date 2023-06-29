@@ -32,6 +32,18 @@ module.exports = (sequelize) => {
         allowNull:false,
         defaultValue: 10,
       },
+      zona:{
+        type:DataTypes.STRING,
+        allowNull:false,
+      },
+      category:{
+        type:DataTypes.STRING,
+        allowNull:false,
+        defaultValue:'restaurante'
+      },
+      variety:{
+        type:DataTypes.STRING,
+      },
       typeOfFood:{
         type:DataTypes.STRING,
       },

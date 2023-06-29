@@ -17,19 +17,34 @@
 //     =====`-.____`.___ \_____/___.-`___.-'=====
 //                       `=---='
 //     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-const server = require('./src/app');
-const { conn } = require('./src/DB_connection');
-const { getAllBares } = require('./src/controllers/DataRequest');
-// const axios = require('axios');
+// const server = require('./src/app.js');
+// // const { getAllBares } = require('./src/controllers/ActivityController.js');
+// const { conn } = require('./src/db.js');
+// // const axios = require('axios');
 // require('dotenv').config() ;
-require('dotenv').config()
 
  
 
+// // Syncing all the models at once.
+// conn.sync({ force: true }).then(async() => {
+//   //  await getAllBares();
+//   server.listen(process.env.PORT, () => {
+//     console.log('%s listening at', process.env.PORT); // eslint-disable-line no-console
+//   });
+// });
+
+const server = require('./src/app.js');
+const { conn } = require('./src/db.js');
+const { getAllBares } = require('./src/controllers/ActivityController.js');
+require('dotenv').config();
+
+const jsonFilePath = require('../client/bares.json'); // Ruta del archivo JSON
+
 // Syncing all the models at once.
-conn.sync({ force: true }).then(async() => {
-  await getAllBares();
-  server.listen(80, () => {
-    console.log('%s listening at 80'); // eslint-disable-line no-console
+conn.sync({ force: true }).then(async () => {
+  await getAllBares(jsonFilePath); // Pasar la ruta del archivo JSON como argumento
+  server.listen(process.env.PORT, () => {
+    console.log('%s listening at', process.env.PORT);
   });
 });
+

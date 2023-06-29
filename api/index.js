@@ -35,16 +35,16 @@
 
 const server = require('./src/app.js');
 const { conn } = require('./src/db.js');
-const { getAllBares } = require('./src/controllers/ActivityController.js');
+const { getAllBares } = require('./src/controllers/Data_Push_Database.js');
 require('dotenv').config();
 
-const jsonFilePath = require('../client/bares.json'); // Ruta del archivo JSON
 
 // Syncing all the models at once.
 conn.sync({ force: true }).then(async () => {
-  await getAllBares(jsonFilePath); // Pasar la ruta del archivo JSON como argumento
+  await getAllBares(); // Pasar la ruta del archivo JSON como argumento
   server.listen(process.env.PORT, () => {
     console.log('%s listening at', process.env.PORT);
   });
 });
+
 

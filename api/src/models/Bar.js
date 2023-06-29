@@ -6,9 +6,10 @@ module.exports = (sequelize) => {
     {
       id: {
         type: DataTypes.INTEGER, // "id": "GLQvEAAAQBAJ",
-        allowNull: false,
+        // type: DataTypes.UUID,
         primaryKey: true,
-        defaultValue: Math.floor((Math.random() * 1000))
+        defaultValue: DataTypes.UUIDV4
+        // defaultValue: Math.floor((Math.random() * 1000))
       },
       name:{
         type: DataTypes.STRING,

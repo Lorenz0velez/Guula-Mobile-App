@@ -1,11 +1,15 @@
-[ 
+   [ 
       {
         "id":1,
         "nombre": "La Trattoria",
         "direccion": "Calle Principal 123",
         "tipo_comida": "Italiana",
         "imagen": "https://www.lavoz.com.ar/resizer/QFElIDU4EK5GKGTjykLr4Yjph_c=/1023x683/smart/cloudfront-us-east-1.images.arcpublishing.com/grupoclarin/PSLCQUSLLBHF3ON7X3LDIOHHJM.jpg",
-        "puntaje": 4.2
+        "puntaje": 4.2,
+        "capacity":80,
+        "zona": "Norte",
+        "webSite": "https://pepecito.com.ar/",
+        "phoneNumber": "3512319592"
       },
       {
         "id":2,
@@ -13,7 +17,11 @@
         "direccion": "Avenida Central 456",
         "tipo_comida": "Mexicana",
         "imagen":"https://www.lavoz.com.ar/resizer/QFElIDU4EK5GKGTjykLr4Yjph_c=/1023x683/smart/cloudfront-us-east-1.images.arcpublishing.com/grupoclarin/PSLCQUSLLBHF3ON7X3LDIOHHJM.jpg" ,
-        "puntaje": 4.8
+        "puntaje": 4.8,
+        "capacity":80,
+        "zona": "Norte",
+        "webSite": "https://pepecito.com.ar/",
+        "phoneNumber": "3512319592"
       },
       {
         "id":3,
@@ -21,7 +29,11 @@
         "direccion": "Calle Secundaria 789",
         "tipo_comida": "Japonesa",
         "imagen": "https://www.lavoz.com.ar/resizer/QFElIDU4EK5GKGTjykLr4Yjph_c=/1023x683/smart/cloudfront-us-east-1.images.arcpublishing.com/grupoclarin/PSLCQUSLLBHF3ON7X3LDIOHHJM.jpg",
-        "puntaje": 3.9
+        "puntaje": 3.9,
+        "capacity":80,
+        "zona": "Norte",
+        "webSite": "https://pepecito.com.ar/",
+        "phoneNumber": "3512319592"
       },
       {
         "id":4,
@@ -29,7 +41,11 @@
         "direccion": "Avenida Principal 321",
         "tipo_comida": "Vegetariana",
         "imagen": "https://www.lavoz.com.ar/resizer/QFElIDU4EK5GKGTjykLr4Yjph_c=/1023x683/smart/cloudfront-us-east-1.images.arcpublishing.com/grupoclarin/PSLCQUSLLBHF3ON7X3LDIOHHJM.jpg",
-        "puntaje": 4.5
+        "puntaje": 4.5,
+        "capacity":80,
+        "zona": "Norte",
+        "webSite": "https://pepecito.com.ar/",
+        "phoneNumber": "3512319592"
       },
       {
         "id":5,
@@ -37,7 +53,11 @@
         "direccion": "Calle Peatonal 987",
         "tipo_comida": "Parrilla",
         "imagen": "https://www.lavoz.com.ar/resizer/QFElIDU4EK5GKGTjykLr4Yjph_c=/1023x683/smart/cloudfront-us-east-1.images.arcpublishing.com/grupoclarin/PSLCQUSLLBHF3ON7X3LDIOHHJM.jpg",
-        "puntaje": 4.0
+        "puntaje": 4.0,
+        "capacity":80,
+        "zona": "Norte",
+        "webSite": "https://pepecito.com.ar/",
+        "phoneNumber": "3512319592"
       },
       {
         "id":6,
@@ -45,7 +65,11 @@
         "direccion": "Avenida Principal 555",
         "tipo_comida": "Francesa",
         "imagen":"https://www.lavoz.com.ar/resizer/QFElIDU4EK5GKGTjykLr4Yjph_c=/1023x683/smart/cloudfront-us-east-1.images.arcpublishing.com/grupoclarin/PSLCQUSLLBHF3ON7X3LDIOHHJM.jpg" ,
-        "puntaje": 4.7
+        "puntaje": 4.7,
+        "capacity":80,
+        "zona": "Norte",
+        "webSite": "https://pepecito.com.ar/",
+        "phoneNumber": "3512319592"
       },
       {
         "id":7,
@@ -53,7 +77,11 @@
         "direccion": "Calle Secundaria 222",
         "tipo_comida": "Hamburguesas",
         "imagen": "https://www.lavoz.com.ar/resizer/QFElIDU4EK5GKGTjykLr4Yjph_c=/1023x683/smart/cloudfront-us-east-1.images.arcpublishing.com/grupoclarin/PSLCQUSLLBHF3ON7X3LDIOHHJM.jpg",
-        "puntaje": 4.3
+        "puntaje": 4.3,
+        "capacity":80,
+        "zona": "Norte",
+        "webSite": "https://pepecito.com.ar/",
+        "phoneNumber": "3512319592"      
       },
       {
         "id":8,
@@ -61,7 +89,11 @@
         "direccion": "Avenida Central 777",
         "tipo_comida": "Mexicana",
         "imagen":"https://www.lavoz.com.ar/resizer/QFElIDU4EK5GKGTjykLr4Yjph_c=/1023x683/smart/cloudfront-us-east-1.images.arcpublishing.com/grupoclarin/PSLCQUSLLBHF3ON7X3LDIOHHJM.jpg" ,
-        "puntaje": 4.6
+        "puntaje": 4.6,
+        "capacity":80,
+        "zona": "Norte",
+        "webSite": "https://pepecito.com.ar/",
+        "phoneNumber": "3512319592"    
       },
       {
         "id":9,
@@ -69,7 +101,12 @@
         "direccion": "Calle Principal 999",
         "tipo_comida": "Italiana",
         "imagen":"https://www.lavoz.com.ar/resizer/QFElIDU4EK5GKGTjykLr4Yjph_c=/1023x683/smart/cloudfront-us-east-1.images.arcpublishing.com/grupoclarin/PSLCQUSLLBHF3ON7X3LDIOHHJM.jpg" ,
-        "puntaje": 4.1
+        "puntaje": 4.1,
+        "capacity":80,
+        "zona": "Norte",
+        "webSite": "https://pepecito.com.ar/",
+        "phoneNumber": "3512319592" 
+                
       },
       {
         "id":10,
@@ -77,7 +114,11 @@
         "direccion": "Avenida Secundaria 444",
         "tipo_comida": "Comida rápida",
         "imagen":"https://www.lavoz.com.ar/resizer/QFElIDU4EK5GKGTjykLr4Yjph_c=/1023x683/smart/cloudfront-us-east-1.images.arcpublishing.com/grupoclarin/PSLCQUSLLBHF3ON7X3LDIOHHJM.jpg" ,
-        "puntaje": 4.9
+        "puntaje": 4.9,
+        "capacity":80,
+        "zona": "Norte",
+        "webSite": "https://pepecito.com.ar/",
+        "phoneNumber": "3512319592" 
       },
       {
         "id":11,
@@ -85,6 +126,10 @@
         "direccion": "Calle Central 666",
         "tipo_comida": "Mediterránea",
         "imagen": "https://www.lavoz.com.ar/resizer/QFElIDU4EK5GKGTjykLr4Yjph_c=/1023x683/smart/cloudfront-us-east-1.images.arcpublishing.com/grupoclarin/PSLCQUSLLBHF3ON7X3LDIOHHJM.jpg",
-        "puntaje": 3.5
+        "puntaje": 3.5,
+        "capacity":80,
+        "zona": "Norte",
+        "webSite": "https://pepecito.com.ar/",
+        "phoneNumber": "3512319592" 
       }
     ]

@@ -47,6 +47,7 @@ export default function BottomTabNav() {
       >
         <Tab.Screen name="FeedScreen" component={FeedScreen} />
         <Tab.Screen name="SearchScreen" component={SearchScreen} />
+        {/* <Tab.Screen name="MyStack" component={MyStack} /> */}
         <Tab.Screen name="SettingsScreen" component={SettingsScreen} />
         <Tab.Screen name="ProfileScreen" component={ProfileScreen} />
       </Tab.Navigator>

@@ -17,22 +17,6 @@
 //     =====`-.____`.___ \_____/___.-`___.-'=====
 //                       `=---='
 //     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-// const server = require('./src/app.js');
-// // const { getAllBares } = require('./src/controllers/ActivityController.js');
-// const { conn } = require('./src/db.js');
-// // const axios = require('axios');
-// require('dotenv').config() ;
-
- 
-
-// // Syncing all the models at once.
-// conn.sync({ force: true }).then(async() => {
-//   //  await getAllBares();
-//   server.listen(process.env.PORT, () => {
-//     console.log('%s listening at', process.env.PORT); // eslint-disable-line no-console
-//   });
-// });
-
 const server = require('./src/app.js');
 const { conn } = require('./src/db.js');
 const { getAllBares } = require('./src/controllers/Data_Push_Database.js');

@@ -1,5 +1,5 @@
 import * as React from 'react';
-import Filters from '../screens/Filters'
+import FiltersScreen from '../screens/FiltersScreen'
 import SearchScreen from '../screens/SearchScreen';
 import { createStackNavigator } from '@react-navigation/stack';
 
@@ -18,8 +18,8 @@ export default function MySearchScreenStack(){
       }}
       />
       <SearchScreenStack.Screen
-      name='Filters'
-      component={Filters}
+      name='FiltersScreen'
+      component={FiltersScreen}
       />
     </SearchScreenStack.Navigator>
   )

@@ -15,8 +15,8 @@ export default function SearchScreen(){
             <View style={styles.searchBar} >
             <SearchBar/>
             </View>
-            <TouchableOpacity style={styles.button}>
-            {/* <TouchableOpacity style={styles.button} onPress={()=> navigation.navigate('Filters')}> */}
+            {/* <TouchableOpacity style={styles.button}> */}
+            <TouchableOpacity style={styles.button} onPress={()=> navigation.navigate('Filters')}>
                 <Text style={styles.buttonText} >FILTERS</Text>
             </TouchableOpacity>
             <ScrollView style={styles.scrollViewBarNames} >

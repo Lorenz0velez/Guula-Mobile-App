@@ -1,18 +1,17 @@
-import { useNavigation } from "@react-navigation/native";
-import React from "react";
-import { Text, View, StyleSheet } from "react-native";
+import React, { useState } from 'react';
+import { View, Text, Modal, TouchableOpacity, FlatList, StyleSheet } from 'react-native';
+import CheckBoxGroup from '../components/Search/CheckBoxGroup';
+import Accordion from '../components/Accordion';
 
-export default function FiltersScreen(){
-    return(
-        <View style={styles.profile} >
-            <Text>Mi Filters</Text>
-        </View>
-    )
-}
+const FiltersScreen = () => {
+  return(
+    <View>
+      <Accordion title="Sección 1" content="Contenido de la sección 1" />
+      <Accordion title="Sección 2" content="Contenido de la sección 2" />
+      <Accordion title="Sección 3" content="Contenido de la sección 3" />
+    </View>
+  )
 
+  }
 
-const styles = StyleSheet.create({
-    profile:{
-        backgroundColor:'green',
-    }
-})
+export default FiltersScreen;

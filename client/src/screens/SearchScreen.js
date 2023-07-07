@@ -12,13 +12,19 @@ export default function SearchScreen(){
 
     return(
         <View style={styles.searchScreenContainer} >
+
+            <View style={styles.searchAndButtonContainer} >
+
+            <TouchableOpacity style={styles.button} onPress={()=> navigation.navigate('FiltersScreen')}>
+                <Text style={styles.buttonText} >FILTRAR</Text>
+            </TouchableOpacity>
+
             <View style={styles.searchBar} >
             <SearchBar/>
             </View>
-            {/* <TouchableOpacity style={styles.button}> */}
-            <TouchableOpacity style={styles.button} onPress={()=> navigation.navigate('FiltersScreen')}>
-                <Text style={styles.buttonText} >FILTERS</Text>
-            </TouchableOpacity>
+
+            </View>
+
             <ScrollView style={styles.scrollViewBarNames} >
                 {
                     bares.map((bar)=>{
@@ -42,27 +48,34 @@ export default function SearchScreen(){
 
 const styles = StyleSheet.create({
     searchScreenContainer:{
-        backgroundColor:'grey'
     },
     searchBar:{
-        height:70,
+        height:80,
+        flexDirection: 'row',
+        alignItems: 'center',
+        backgroundColor: '#f2f2f2',
+        borderRadius: 4,
+        flex: 1,
+        marginLeft: 10,
+        paddingHorizontal: 5,
     },
     scrollViewBarNames:{
         backgroundColor:'white',
         marginBottom:70,
     },
-    button: {
-        backgroundColor: '#e9e9e9',
-        paddingVertical: 12,
-        paddingHorizontal: 24,
-        borderRadius: 25,
+    searchAndButtonContainer: {
+        flexDirection: 'row',
         alignItems: 'center',
-        justifyContent: 'center',
-        shadowColor: '#000',
-        shadowOpacity: 0.3,
-        shadowOffset: { width: 2, height: 2 },
-        shadowRadius: 2,
-        elevation: 2,
+        justifyContent: 'space-between',
+        paddingHorizontal: 16,
+        paddingVertical: 8,
+      },
+    button: {
+        width: 100,
+        backgroundColor: '#4da6ff',
+        borderRadius: 20,
+        paddingVertical: 8,
+        paddingHorizontal: 12,
       },
       buttonText: {
         color: '#333',

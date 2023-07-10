@@ -9,37 +9,30 @@ const Card = ({ image, name, price, rating, onSave }) => {
       <Text style={styles.price}>Precio: {price}</Text>
       <Text style={styles.rating}>Rating: {rating}</Text>
       {/* <TouchableOpacity style={styles.button} onPress={onSave}> */}
-      <TouchableOpacity style={styles.button}>
+      {/* <TouchableOpacity style={styles.button}>
         <Text style={styles.buttonText}>Guardar</Text>
-      </TouchableOpacity>
+      </TouchableOpacity> */}
     </View>
   );
 };
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: 'grey',
+    backgroundColor: '#ECE8E1',
     borderRadius: 10,
     padding: 10,
     marginBottom: 10,
     marginTop:10,
     elevation: 2,
-    minHeight:320,
-    minWidth:320,
+    maxHeight:250,
+    maxWidth:360,
+    minHeight:250,
+    minWidth:360,
     marginHorizontal:10,
-
-    // shadowColor: '#000',
-    // shadowOffset: {
-    //   width: 2,
-    //   height: 3,
-    // },
-    // shadowOpacity: 1,
-    // shadowRadius: 2,
-    // elevation: 2,
   },
   image: {
     width: '100%',
-    height: 150,
+    height: 130,
     borderRadius: 10,
     marginBottom: 10,
   },
@@ -61,6 +54,8 @@ const styles = StyleSheet.create({
     borderRadius: 5,
     padding: 10,
     alignSelf: 'flex-end',
+    //
+    // marginBottom:00,
   },
   buttonText: {
     color: '#ffffff',

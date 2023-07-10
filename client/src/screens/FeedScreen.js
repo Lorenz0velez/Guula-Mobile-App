@@ -2,16 +2,14 @@ import React from "react";
 import { Text, View, StyleSheet, ScrollView } from "react-native";
 import SearchBar from "../components/Search/SearchBar";
 import { LinearGradient } from "expo-linear-gradient";
-import Card from "../components/Feed/Card";
-import Slider from "../components/Feed/Slider";
-import bares from "../../bares";
+// import bares from "../../bares";
+import SliderNovedades from "../components/Feed/SliderNovedades";
+import SliderCercaTuyo from "../components/Feed/SliderCercaTuyo";
+import SliderDescuento from "../components/Feed/SliderDescuento";
 
 
 
 export default function FeedScreen(){
-
-
-    const array = [];
 
     return(
         <ScrollView style={styles.feed}>
@@ -23,26 +21,19 @@ export default function FeedScreen(){
              >
             <Text style={styles.title} >Guula's Mobile App</Text>
             </LinearGradient>
+
+            <View style={styles.SearchBarContainer} >
             <SearchBar/>
-            <Text style={styles.textSubTitles}>NOVEDADES</Text>
-            <View style={styles.slider} >
-                <Slider/>
             </View>
 
-            <View>
-            {
-                bares.map((bar)=>{
-                    return(
-                        <Card
-                        image={'https://www.shutterstock.com/image-photo/outdoor-empty-coffee-restaurant-terrace-260nw-1884717178.jpg'} 
-                        name={bar.nombre}
-                        price={'$999'}
-                        rating={bar.puntaje}
-                        key={bar.id}
-                        /> 
-                    )
-                })
-            }
+            <View style={styles.slider} >
+                <SliderNovedades/>
+            </View>
+            <View style={styles.slider} >
+                <SliderCercaTuyo/>
+            </View>
+            <View style={styles.slider} >
+                <SliderDescuento/>
             </View>
             
         </ScrollView>
@@ -51,6 +42,11 @@ export default function FeedScreen(){
 
 
 const styles = StyleSheet.create({
+    SearchBarContainer:{
+        marginVertical:15,
+        marginHorizontal:10,
+        padding:5
+    },
     textSubTitles:{
         fontSize:15,
         alignSelf:"center",

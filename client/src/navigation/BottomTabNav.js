@@ -6,6 +6,7 @@ import ProfileScreen from '../screens/ProfileScreen';
 import FeedScreen from '../screens/FeedScreen';
 import SearchScreen from '../screens/SearchScreen';
 import MySearchScreenStack from './SearchScreenStack';
+import MyFeedStack from './FeedStackNavigation';
 
 
 const Tab = createBottomTabNavigator();
@@ -45,9 +46,12 @@ export default function BottomTabNav() {
         }
       })}
       >
+
+        {/* PARA UTITLIZAR EL STACK NAVIGATOR DENTRO DE MI APLICACION QUE TIENE COMO PRINCIPAL NAVEGADOR EL BOTTOMTABNAVIGATOR 
+        TENGO QUE EN MIS TABSCREEN PONER QUE EL COMPONENTE ES MI STACK CORRESPONDIENTE */}
         <Tab.Screen 
         name="FeedScreen" 
-        component={FeedScreen} 
+        component={MyFeedStack} 
         options={{
           tabBarLabel:'Home',
           tabBarBadge:3, //---->>> NOTIFICACIONES ARRIBA DEL ICONO
@@ -64,6 +68,7 @@ export default function BottomTabNav() {
           headerShown:false, // HACE QUE EL HEADER CON EL NOMBRE NO SE MUESTRE
         }}
          />
+        
         <Tab.Screen name="SettingsScreen" component={SettingsScreen} />
         <Tab.Screen name="ProfileScreen" component={ProfileScreen} />
       </Tab.Navigator>

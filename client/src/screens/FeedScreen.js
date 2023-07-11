@@ -6,10 +6,13 @@ import { LinearGradient } from "expo-linear-gradient";
 import SliderNovedades from "../components/Feed/SliderNovedades";
 import SliderCercaTuyo from "../components/Feed/SliderCercaTuyo";
 import SliderDescuento from "../components/Feed/SliderDescuento";
+import { useNavigation } from "@react-navigation/native";
 
 
 
 export default function FeedScreen(){
+
+    // const navigation = useNavigation();
 
     return(
         <ScrollView style={styles.feed}>

@@ -1,5 +1,6 @@
 import React from 'react';
 import { View, Text, Image, TouchableOpacity, StyleSheet, ScrollView } from 'react-native';
+import PropTypes from 'prop-types';
 
 const ProfileScreen = () => {
   const profileData = {
@@ -9,12 +10,8 @@ const ProfileScreen = () => {
     coupons: 2,
     favorites: 10,
     preferences: 'Italian, Mexican, Vegetarian',
-    profileImage: 'https://holatelcel.com/wp-content/uploads/2020/09/instagram-foto-de-perfil-4.jpg', // Ruta a tu imagen de perfil
+    profileImage: { uri: 'https://holatelcel.com/wp-content/uploads/2020/09/instagram-foto-de-perfil-4.jpg' }, // Utiliza un objeto de imagen con la propiedad 'uri'
   };
-
-//   const handleEditProfile = () => {
-//     // Lógica para navegar a la pantalla de edición de perfil
-//   };
 
   return (
     <ScrollView style={styles.container}>
@@ -41,13 +38,21 @@ const ProfileScreen = () => {
           <Text style={styles.statLabel}>Preferencias</Text>
         </View>
       </View>
-      {/* <TouchableOpacity style={styles.editButton} onPress={handleEditProfile}> */}
-      <TouchableOpacity style={styles.editButton} >
+      <TouchableOpacity style={styles.editButton}>
         <Text style={styles.editButtonText}>Editar perfil</Text>
       </TouchableOpacity>
     </ScrollView>
   );
 };
+
+ProfileScreen.propTypes = {
+  // Define las propiedades esperadas y sus tipos
+  profileImage: PropTypes.shape({
+    uri: PropTypes.string.isRequired,
+  }),
+};
+
+
 
 const styles = StyleSheet.create({
   container: {

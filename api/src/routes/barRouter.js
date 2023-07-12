@@ -1,9 +1,6 @@
 const { Router } = require('express');
 const getAllRestaurants = require('../controllers/getAllRestaurants');
-// const getRestaurantsByName = require('../controllers/getRestaurantsByName');
-const { Bar } = require("../db");
-const getRestaurantsByName = require('../controllers/getRestaurantsByName');
-
+const getRestaurantsById = require('../controllers/getRestaurantsByID');
 
 
 const barRouter = Router();
@@ -12,33 +9,28 @@ const barRouter = Router();
 // Ejemplo: router.use('/auth', authRouter);
 
 
-barRouter.get('/bares', async(req,res,next)=>{
+// ESTA RUTA TRAE TODOS LOS ELEMENTOS ACTIVOS DE LA BASE DE DATOS Y SI HAY UN NOMBRE POR QUERY TRAE ESE ELEMENTO.
+  barRouter.get('/', async(req, res, next)=>{
+    const { name } = req.query;
     try {
-        const allBares = await getAllRestaurants();
-        
-        return res.status(200).json(allBares);
+      const barsList = await getAllRestaurants(name);
+      res.status(200).json(barsList);
     } catch (error) {
-        console.log(error)
-        return res.status(400).json({error:error.message})
-    } 
+      next(error);
+    }
 });
 
-barRouter.get('/restaurantes/:nombre', async (req, res) => {
-    const name = req.params.nombre;
-  
+
+//ESTA RUTA ME TRAE EL ELEMENTO QUE COINCIDA CON ID PASADO POR PARAMS
+barRouter.get('/:id', async (req, res, next) =>{
+    const {id} = req.params;
     try {
-      // Buscar el restaurante por su nombre en la base de datos
-      const restaurante = await getRestaurantsByName(name);
-  
-      if (restaurante) {
-        res.json(restaurante);
-      } else {
-        res.status(404).json({ error: 'Restaurante no encontrado' });
-      }
+      const bar = await getRestaurantsById(id);
+      res.status(200).json(bar)
     } catch (error) {
-      console.error('Error al buscar el restaurante:', error);
-      res.status(500).json({ error: 'Error interno del servidor' });
+      next(error)
     }
-  });
+  })
+
 
 module.exports = barRouter;

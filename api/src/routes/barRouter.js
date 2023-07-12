@@ -1,23 +1,46 @@
 const { Router } = require('express');
-const getAllBooks = require('../controllers/BarController');
+const getAllRestaurants = require('../controllers/getAllRestaurants');
+const getRestaurantsByName = require('../controllers/getRestaurantsByName');
 
 
 
-const router = Router();
+const barRouter = Router();
 
 // Configurar los routers
 // Ejemplo: router.use('/auth', authRouter);
 
-router.get('/bares', async (req, res, next)=>{
 
+barRouter.get('/bares', async(req,res,next)=>{
     try {
-        const allBooks = await getAllBooks();
-        console.log('allBooks:', allBooks);
-        return res.status(200).json(allBooks);
+        const allBares = await getAllRestaurants();
+        
+        return res.status(200).json(allBares);
     } catch (error) {
-        console.log('error:', error);
+        console.log(error)
         return res.status(400).json({error:error.message})
     } 
 })
 
-module.exports = router;
+// barRouter.get('/', async (req, res) => {
+//     const { barName } = req.query;
+
+    // if (barName) {
+    //     try {
+    //         const barcito = await getRestaurantsByName(barName)
+    //         return res.status(200).json(barcito) 
+    //     } catch (error) {
+    //         return res.status(400).json({error:error.message}) 
+    //     }
+    // }
+
+    // try {
+    //     const allRestaurants = await getAllRestaurants();
+    //     return res.status(200).json(allRestaurants);
+    // } catch (error) {
+    //     console.log('error:', error);
+    //     return res.status(400).json({error:error.message})
+    // } 
+
+// });
+
+module.exports = barRouter;

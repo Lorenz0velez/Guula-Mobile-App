@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Text, View, StyleSheet, ScrollView } from "react-native";
 import SearchBar from "../components/Search/SearchBar";
 import { LinearGradient } from "expo-linear-gradient";
@@ -7,12 +7,19 @@ import SliderNovedades from "../components/Feed/SliderNovedades";
 import SliderCercaTuyo from "../components/Feed/SliderCercaTuyo";
 import SliderDescuento from "../components/Feed/SliderDescuento";
 import { useNavigation } from "@react-navigation/native";
+import { useDispatch, useSelector } from "react-redux";
+import { getAllRestaurants } from "../redux/actions";
 
 
 
 export default function FeedScreen(){
 
-    // const navigation = useNavigation();
+    // const dispatch = useDispatch();
+    // const allRestaurants = useSelector(state=>state.allRestaurants);
+
+    // useEffect(()=>{
+    //     dispatch(getAllRestaurants());
+    // },[dispatch]);
 
     return(
         <ScrollView style={styles.feed}>

@@ -2,13 +2,25 @@ import React from "react";
 import { SafeAreaView, FlatList, StyleSheet, Text } from "react-native";
 import bares from "../../../bares";
 import Card from "./Card";
+import { getAllRestaurants } from "../../redux/actions";
+import { useDispatch, useSelector } from "react-redux";
 
 export default function SliderNovedades() {
+
+  // const dispatch = useDispatch();
+  // const allRestaurants = useSelector(state=>state.allRestaurants);
+
+  // useEffect(()=>{
+  //     dispatch(getAllRestaurants());
+  // },[dispatch]);
+
+
     return (
       <SafeAreaView style={styles.container}>
         <Text style={styles.textSubTitles}>NOVEDADES</Text> 
         <FlatList
           data={bares}
+          // data={allRestaurants}
           renderItem={({ item }) => (
             <Card
               // image={item.imagen}

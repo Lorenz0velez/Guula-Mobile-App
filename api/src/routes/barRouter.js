@@ -10,7 +10,7 @@ const barRouter = Router();
 
 
 // ESTA RUTA TRAE TODOS LOS ELEMENTOS ACTIVOS DE LA BASE DE DATOS Y SI HAY UN NOMBRE POR QUERY TRAE ESE ELEMENTO.
-  barRouter.get('/', async(req, res, next)=>{
+  barRouter.get('/bares', async(req, res, next)=>{
     const { name } = req.query;
     try {
       const barsList = await getAllRestaurants(name);

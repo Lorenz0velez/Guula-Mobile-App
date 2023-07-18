@@ -2,7 +2,7 @@ import { useNavigation } from '@react-navigation/native';
 import React from 'react';
 import { View, Text, Image, TouchableOpacity, StyleSheet } from 'react-native';
 
-const Card = ({ image, name, price, rating, onSave }) => {
+const Card = ({ image, name, price, rating, onSave, key }) => {
 
   const navigation = useNavigation();
 

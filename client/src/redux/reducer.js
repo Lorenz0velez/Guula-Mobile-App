@@ -2,7 +2,8 @@ import { GET_ALL_RESTAURANTS } from "./actions";
 
 
 const initialState= {
-    allRestaurants:{},
+    // allRestaurants:[],
+    allRestaurants:[],  
 }
 
 const rootReducer = (state = initialState, action) => {

@@ -1,33 +1,30 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { SafeAreaView, FlatList, StyleSheet, Text } from "react-native";
 import bares from "../../../bares";
 import Card from "./Card";
-import { getAllRestaurants } from "../../redux/actions";
+import { getAllCountries, getAllRestaurants, getBooks } from "../../redux/actions";
 import { useDispatch, useSelector } from "react-redux";
 
 export default function SliderNovedades() {
 
-  // const dispatch = useDispatch();
-  // const allRestaurants = useSelector(state=>state.allRestaurants);
-
-  // useEffect(()=>{
-  //     dispatch(getAllRestaurants());
-  // },[dispatch]);
-
+  const dispatch = useDispatch();
+  const allRestaurants = useSelector(state=>state.allRestaurants);
+  useEffect(()=>{
+    console.log('allRestaurants from component: ',allRestaurants)
+    dispatch(getAllCountries());
+},[]);
 
     return (
       <SafeAreaView style={styles.container}>
         <Text style={styles.textSubTitles}>NOVEDADES</Text> 
-        <FlatList
-          data={bares}
-          // data={allRestaurants}
-          renderItem={({ item }) => (
+        <FlatList 
+          data={allRestaurants}
+          renderItem={(bar) =>( 
             <Card
-              // image={item.imagen}
-              image={'https://www.cronista.com/files/image/489/489872/6377bc64db927.png'}
-              name={item.nombre}
-              price={`$5000`}
-              rating={item.puntaje}
+              image={bar.item.image}
+              name={bar.item.name}
+              price={bar.item.price}
+              rating={bar.item.rating}
             />
           )}
           keyExtractor={(item) => item.id.toString()}

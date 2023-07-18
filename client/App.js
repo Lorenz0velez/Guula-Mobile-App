@@ -4,19 +4,17 @@ import { StyleSheet, Text, View } from 'react-native';
 import Constants from 'expo-constants';
 import { NavigationContainer } from '@react-navigation/native';
 import BottomTabNav from './src/navigation/BottomTabNav';
-import { Provider } from 'react-redux';
-import store from './src/redux/store';
+import axios from 'axios';
 
+// axios.defaults.baseURL = "http://localhost:3001/" ; 
 
 export default function App() {
   return (
-    // <Provider store={store} >
       <NavigationContainer>
           <View style={{marginTop: Constants.statusBarHeight, flexGrow: 1}}>
               <BottomTabNav/> 
           </View>
     </NavigationContainer>
-    // </Provider>
    
   );
 }

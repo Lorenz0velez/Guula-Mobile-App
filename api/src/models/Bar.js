@@ -57,6 +57,9 @@ module.exports = (sequelize) => {
       active:{
         type: DataTypes.BOOLEAN,
         defaultValue: true 
+      },
+      averagePrice:{
+        type: DataTypes.INTEGER
       }
       
     },

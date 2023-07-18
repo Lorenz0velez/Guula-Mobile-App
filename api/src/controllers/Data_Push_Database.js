@@ -17,7 +17,8 @@ const getAllBares = async () => {
         typeOfFood: data.tipo_comida,
         webSite: data.webSite,
         phoneNumber: data.phoneNumber,
-        zona: data.zona
+        zona: data.zona,
+        averagePrice:data.averagePrice
       };
     });
 

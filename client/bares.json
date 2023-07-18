@@ -9,7 +9,8 @@
         "capacity":80,
         "zona": "Norte",
         "webSite": "https://pepecito.com.ar/",
-        "phoneNumber": "3512319592"
+        "phoneNumber": "3512319592",
+        "averagePrice":444
       },
       {
         "id":2,
@@ -21,7 +22,8 @@
         "capacity":80,
         "zona": "Norte",
         "webSite": "https://pepecito.com.ar/",
-        "phoneNumber": "3512319592"
+        "phoneNumber": "3512319592",
+        "averagePrice":444
       },
       {
         "id":3,
@@ -33,7 +35,8 @@
         "capacity":80,
         "zona": "Norte",
         "webSite": "https://pepecito.com.ar/",
-        "phoneNumber": "3512319592"
+        "phoneNumber": "3512319592",
+        "averagePrice":555
       },
       {
         "id":4,
@@ -45,7 +48,8 @@
         "capacity":80,
         "zona": "Norte",
         "webSite": "https://pepecito.com.ar/",
-        "phoneNumber": "3512319592"
+        "phoneNumber": "3512319592",
+        "averagePrice":555
       },
       {
         "id":5,
@@ -57,7 +61,8 @@
         "capacity":80,
         "zona": "Norte",
         "webSite": "https://pepecito.com.ar/",
-        "phoneNumber": "3512319592"
+        "phoneNumber": "3512319592",
+        "averagePrice":555
       },
       {
         "id":6,
@@ -69,7 +74,8 @@
         "capacity":80,
         "zona": "Norte",
         "webSite": "https://pepecito.com.ar/",
-        "phoneNumber": "3512319592"
+        "phoneNumber": "3512319592",
+        "averagePrice":666
       },
       {
         "id":7,
@@ -81,7 +87,8 @@
         "capacity":80,
         "zona": "Norte",
         "webSite": "https://pepecito.com.ar/",
-        "phoneNumber": "3512319592"      
+        "phoneNumber": "3512319592"  ,
+        "averagePrice":666    
       },
       {
         "id":8,
@@ -93,7 +100,8 @@
         "capacity":80,
         "zona": "Norte",
         "webSite": "https://pepecito.com.ar/",
-        "phoneNumber": "3512319592"    
+        "phoneNumber": "3512319592"  ,
+        "averagePrice":666  
       },
       {
         "id":9,
@@ -105,7 +113,8 @@
         "capacity":80,
         "zona": "Norte",
         "webSite": "https://pepecito.com.ar/",
-        "phoneNumber": "3512319592" 
+        "phoneNumber": "3512319592" ,
+        "averagePrice":777
                 
       },
       {
@@ -118,7 +127,8 @@
         "capacity":80,
         "zona": "Norte",
         "webSite": "https://pepecito.com.ar/",
-        "phoneNumber": "3512319592" 
+        "phoneNumber": "3512319592" ,
+        "averagePrice":777
       },
       {
         "id":11,
@@ -130,6 +140,7 @@
         "capacity":80,
         "zona": "Norte",
         "webSite": "https://pepecito.com.ar/",
-        "phoneNumber": "3512319592" 
+        "phoneNumber": "3512319592" ,
+        "averagePrice":777
       }
     ]

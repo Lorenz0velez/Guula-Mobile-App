@@ -1,20 +1,31 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { SafeAreaView, FlatList, StyleSheet, Text } from "react-native";
-import bares from "../../../bares";
 import Card from "./Card";
+import { useDispatch, useSelector } from "react-redux";
+import { getAllRestaurants } from "../../redux/actions";
 
-export default function SliderCercaTuyo() {
+export default function SliderDescuento() {
+
+  const dispatch = useDispatch();
+  const allRestaurants = useSelector(state=>state.allRestaurants);
+  useEffect(()=>{
+    // console.log('allRestaurants from component: ',allRestaurants)
+    dispatch(getAllRestaurants());
+},[]);
+
     return (
       <SafeAreaView style={styles.container}>
         <Text style={styles.textSubTitles}>CERCA TUYO</Text> 
-        <FlatList
-          data={bares}
-          renderItem={({ item }) => (
+        
+        <FlatList 
+          data={allRestaurants}
+          renderItem={(bar) =>( 
             <Card
-              image={item.imagen}
-              name={item.nombre}
-              price={`$4500`}
-              rating={item.puntaje}
+              // image={bar.item.image}
+              image={'https://cdn.pixabay.com/photo/2013/11/12/01/29/bar-209148_640.jpg'}
+              name={bar.item.name}
+              averagePrice={bar.item.averagePrice}
+              rating={bar.item.rating}
             />
           )}
           keyExtractor={(item) => item.id.toString()}

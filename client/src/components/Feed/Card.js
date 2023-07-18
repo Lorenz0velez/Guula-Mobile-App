@@ -2,18 +2,18 @@ import { useNavigation } from '@react-navigation/native';
 import React from 'react';
 import { View, Text, Image, TouchableOpacity, StyleSheet } from 'react-native';
 
-const Card = ({ image, name, price, rating, onSave, key }) => {
+const Card = ({ image, name, rating, onSave, averagePrice, id }) => {
 
   const navigation = useNavigation();
 
   return (
     <View style={styles.container}>
       <TouchableOpacity
-      onPress={()=>navigation.navigate('CardDetailScreen')}
+      onPress={()=>navigation.navigate( 'CardDetailScreen', {id:id} )}
       >
       <Image source={{ uri: image }} style={styles.image} />
       <Text style={styles.name}>{name}</Text>
-      <Text style={styles.price}>Precio: {price}</Text>
+      <Text style={styles.price}>Precio: {averagePrice}</Text>
       <Text style={styles.rating}>Rating: {rating}</Text>
       </TouchableOpacity>
     </View>

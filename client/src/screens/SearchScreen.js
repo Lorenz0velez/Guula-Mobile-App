@@ -1,49 +1,62 @@
-import React from "react";
-import { Text, View, StyleSheet, ScrollView, TouchableOpacity, Button } from "react-native";
+import React, { useEffect, useState } from "react";
+import { Text, View, StyleSheet, ScrollView, TouchableOpacity, Button, SafeAreaView } from "react-native";
 import SearchBar from "../components/Search/SearchBar";
 import bares from '../../bares';
 import SearchCard from "../components/Search/SearchCard";
 import { useNavigation } from "@react-navigation/native";
+import MapScreenSearch from "../components/Search/MapSearch";
+import SearchScreenMapPlacesAPI from "../components/Search/MapSearchScreenChatGPT";
+import MapYoutubeTest from "../components/Search/MapYoutubeTest";
+
+
+// export default function SearchScreen(){
+
+//     const navigation = useNavigation();
+//     const [mapLoaded, setMapLoaded] = useState(false);
+  
+//     useEffect(() => {
+//       // Aquí simulamos un tiempo de carga del mapa (puedes ajustarlo según tus necesidades)
+//       setTimeout(() => {
+//         setMapLoaded(true);
+//       }, 1000); // Esperamos 1 segundo para cargar el mapa
+//     }, []);
+  
+
+
+//     return(
+//         <View style={styles.searchScreenContainer} >
+
+//             <View style={styles.searchAndButtonContainer} >
+
+//             <TouchableOpacity style={styles.button} onPress={()=> navigation.navigate('FiltersScreen')}>
+//                 <Text style={styles.buttonText} >FILTRAR</Text>
+//             </TouchableOpacity>
+
+//             <View style={styles.searchBar} >
+//             <SearchBar/>
+//             </View>
+
+//             </View>
+
+//             {/* <SafeAreaView style={{ marginHorizontal: 5 }}>
+//         {mapLoaded && <MapSearchScreen style={{ height: 800, width: '100%' }} />}
+//       </SafeAreaView> */}
+//       <SafeAreaView style={{ marginHorizontal: 5 }}>
+//   <MapScreenSearch />
+// </SafeAreaView>
+//         </View>
+//     )
+// }
 
 export default function SearchScreen(){
 
-    const navigation = useNavigation();
-
-
     return(
-        <View style={styles.searchScreenContainer} >
-
-            <View style={styles.searchAndButtonContainer} >
-
-            <TouchableOpacity style={styles.button} onPress={()=> navigation.navigate('FiltersScreen')}>
-                <Text style={styles.buttonText} >FILTRAR</Text>
-            </TouchableOpacity>
-
-            <View style={styles.searchBar} >
-            <SearchBar/>
-            </View>
-
-            </View>
-
-            <ScrollView style={styles.scrollViewBarNames} >
-                {
-                    bares.map((bar)=>{
-                        return(
-                            <SearchCard
-                            image={'https://www.shutterstock.com/image-photo/outdoor-empty-coffee-restaurant-terrace-260nw-1884717178.jpg'} 
-                            name={bar.nombre}
-                            price={'$999'}
-                            rating={bar.puntaje}
-                            foodType={'Arabe'}
-                            key={bar.id}
-                            />
-                        )
-                    })
-                }
-            </ScrollView>
+        <View>
+            <MapYoutubeTest/>
         </View>
     )
 }
+
 
 
 const styles = StyleSheet.create({

@@ -51,5 +51,14 @@
 	<false/>
   <key>UIStatusBarStyle</key>
   <string>UIStatusBarStyleDefault</string>
+  
+<!-- GOOGLE MAPS PERMSISION -->
+<key>NSLocationWhenInUseUsageDescription</key>
+<string>Your app needs access to location when open.</string>
+
+<key>GOOGLE_MAPS_PLACES_API_KEY</key>
+<string>${GOOGLE_MAPS_PLACES_API_KEY}</string>
+
+
 </dict>
 </plist>

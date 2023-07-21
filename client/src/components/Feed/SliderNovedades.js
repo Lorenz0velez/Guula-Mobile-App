@@ -21,7 +21,7 @@ export default function SliderNovedades() {
           renderItem={(bar) =>( 
             <Card
               // image={bar.item.image}
-              image={'https://hips.hearstapps.com/hmg-prod/images/dilek-s-elle-gourmet-641d55b1626b8.jpg?crop=0.918xw:0.690xh;0.0820xw,0.232xh&resize=1200:*'}
+              image={bar.item.image}
               name={bar.item.name}
               averagePrice={bar.item.averagePrice}
               rating={bar.item.rating}

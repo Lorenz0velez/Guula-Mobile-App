@@ -12,6 +12,9 @@ if (System.getenv('EX_UPDATES_NATIVE_DEBUG') == "1") {
     expoDebuggableVariants = []
   }
 }
+apply from: project(':react-native-config').projectDir.getPath() + "/dotenv.gradle"
+
+// Resto del archivo build.gradle
 
 
 /**

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { View, Text, Button, TouchableOpacity, StyleSheet } from 'react-native';
+import { View, Text, Button, TouchableOpacity, StyleSheet, Image } from 'react-native';
 import { FontAwesome } from '@expo/vector-icons'; // Para el icono de las estrellas
 import { useDispatch, useSelector } from 'react-redux';
 import { getRestaurantById } from '../redux/actions';
@@ -52,6 +52,7 @@ const CardDetailScreen = ({ route }) => {
 
   return (
     <View style={styles.container}>
+        <Image source={{ uri: restaurantDetail.image }} style={styles.image} />
       <Text style={styles.name}>{restaurantDetail.name}</Text>
       <Text style={styles.location}>{restaurantDetail.address}</Text>
       <Text style={styles.price}>Precio: {restaurantDetail.averagePrice}</Text>
@@ -70,6 +71,12 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     padding: 20,
+  },
+  image: {
+    width: '100%',
+    height: 200, // Ajusta la altura según tus necesidades
+    resizeMode: 'cover', // Puedes ajustar la propiedad resizeMode según tus preferencias
+    marginBottom: 10,
   },
   name: {
     fontSize: 24,

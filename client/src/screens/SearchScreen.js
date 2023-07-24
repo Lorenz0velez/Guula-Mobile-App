@@ -9,53 +9,53 @@ import SearchScreenMapPlacesAPI from "../components/Search/MapSearchScreenChatGP
 import MapYoutubeTest from "../components/Search/MapYoutubeTest";
 
 
-// export default function SearchScreen(){
-
-//     const navigation = useNavigation();
-//     const [mapLoaded, setMapLoaded] = useState(false);
-  
-//     useEffect(() => {
-//       // Aquí simulamos un tiempo de carga del mapa (puedes ajustarlo según tus necesidades)
-//       setTimeout(() => {
-//         setMapLoaded(true);
-//       }, 1000); // Esperamos 1 segundo para cargar el mapa
-//     }, []);
-  
-
-
-//     return(
-//         <View style={styles.searchScreenContainer} >
-
-//             <View style={styles.searchAndButtonContainer} >
-
-//             <TouchableOpacity style={styles.button} onPress={()=> navigation.navigate('FiltersScreen')}>
-//                 <Text style={styles.buttonText} >FILTRAR</Text>
-//             </TouchableOpacity>
-
-//             <View style={styles.searchBar} >
-//             <SearchBar/>
-//             </View>
-
-//             </View>
-
-//             {/* <SafeAreaView style={{ marginHorizontal: 5 }}>
-//         {mapLoaded && <MapSearchScreen style={{ height: 800, width: '100%' }} />}
-//       </SafeAreaView> */}
-//       <SafeAreaView style={{ marginHorizontal: 5 }}>
-//   <MapScreenSearch />
-// </SafeAreaView>
-//         </View>
-//     )
-// }
-
 export default function SearchScreen(){
 
+    const navigation = useNavigation();
+    const [mapLoaded, setMapLoaded] = useState(false);
+  
+    useEffect(() => {
+      // Aquí simulamos un tiempo de carga del mapa (puedes ajustarlo según tus necesidades)
+      setTimeout(() => {
+        setMapLoaded(true);
+      }, 1000); // Esperamos 1 segundo para cargar el mapa
+    }, []);
+  
+
+
     return(
-        <View>
-            <MapYoutubeTest/>
+        <View style={styles.searchScreenContainer} >
+
+            <View style={styles.searchAndButtonContainer} >
+
+            <TouchableOpacity style={styles.button} onPress={()=> navigation.navigate('FiltersScreen')}>
+                <Text style={styles.buttonText} >FILTRAR</Text>
+            </TouchableOpacity>
+
+            <View style={styles.searchBar} >
+            <SearchBar/>
+            </View>
+
+            </View>
+
+            {/* <SafeAreaView style={{ marginHorizontal: 5 }}>
+        {mapLoaded && <MapSearchScreen style={{ height: 800, width: '100%' }} />}
+      </SafeAreaView> */}
+      {/* <SafeAreaView style={{ marginHorizontal: 5 }}>
+  <MapScreenSearch />
+</SafeAreaView> */}
         </View>
     )
 }
+
+// export default function SearchScreen(){
+
+//     return(
+//         <View>
+//             <MapYoutubeTest/>
+//         </View>
+//     )
+// }
 
 
 

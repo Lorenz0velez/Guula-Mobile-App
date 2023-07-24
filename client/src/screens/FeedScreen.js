@@ -12,6 +12,7 @@ import { getAllRestaurants } from "../redux/actions";
 
 
 
+
 export default function FeedScreen(){
 
     // const dispatch = useDispatch();
@@ -23,14 +24,16 @@ export default function FeedScreen(){
 
     return(
         <ScrollView style={styles.feed}>
-            <LinearGradient
+             {/* <LinearGradient 
              style={styles.containerLinearGradient} 
              colors={['red', 'orange', 'white']}
              start={{ x: 0, y: 0 }}
              end={{ x: 1, y: 0 }}
-             >
-            <Text style={styles.title} >Guula's Mobile App</Text>
-            </LinearGradient>
+              > 
+            <Text style={styles.title} >Guula</Text>
+             </LinearGradient>  */}
+
+<Text style={styles.title} >Guula</Text>
 
             <View style={styles.SearchBarContainer} >
             <SearchBar/>
@@ -69,12 +72,14 @@ const styles = StyleSheet.create({
         backgroundColor:'white',
     },
     title:{
-        fontSize:24,
+        fontSize:28,
         alignSelf:"center",
         margin:12,
         padding:12,
         fontWeight:'bold',
-        color:'#333333',
+        color:'white',
+        backgroundColor:'black'
+
     },
     containerLinearGradient:{
         width: '100%',

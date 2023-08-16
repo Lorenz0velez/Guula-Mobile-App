@@ -4,15 +4,21 @@ import SearchBar from "../components/Search/SearchBar";
 import bares from '../../bares';
 import SearchCard from "../components/Search/SearchCard";
 import { useNavigation } from "@react-navigation/native";
-import MapScreenSearch from "../components/Search/MapSearch";
+import MapScreenSearch22 from "../components/Search/MapSearch";
 import SearchScreenMapPlacesAPI from "../components/Search/MapSearchScreenChatGPT";
 import MapYoutubeTest from "../components/Search/MapYoutubeTest";
+
+import MapView from "react-native-maps";
 
 
 export default function SearchScreen(){
 
     const navigation = useNavigation();
     const [mapLoaded, setMapLoaded] = useState(false);
+    const [origin, setOrigin]= useState({
+      latitude: -31.363436895888395,
+      longitude:-64.2112591166254
+    })
   
     useEffect(() => {
       // Aquí simulamos un tiempo de carga del mapa (puedes ajustarlo según tus necesidades)
@@ -35,16 +41,18 @@ export default function SearchScreen(){
             <View style={styles.searchBar} >
             <SearchBar/>
             </View>
-
-            </View>
-
-            {/* <SafeAreaView style={{ marginHorizontal: 5 }}>
-        {mapLoaded && <MapSearchScreen style={{ height: 800, width: '100%' }} />}
-      </SafeAreaView> */}
-      {/* <SafeAreaView style={{ marginHorizontal: 5 }}>
-  <MapScreenSearch />
-</SafeAreaView> */}
+          </View>
+          <MapView
+          style={styles.map}
+          initialRegion={{
+            latitude:origin.latitude,
+            latitudeDelta:0.09,
+            longitude:origin.longitude,
+            longitudeDelta:0.04
+          }}
+          />
         </View>
+
     )
 }
 
@@ -96,4 +104,8 @@ const styles = StyleSheet.create({
         fontWeight: 'bold',
         marginVertical:10
       },
+      map:{
+        width:'100%',
+        height:'100%'
+      }
 })

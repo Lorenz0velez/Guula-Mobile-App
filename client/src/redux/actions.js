@@ -7,7 +7,7 @@ export const GET_RESTAURANT_BY_NAME = "GET_RESTAURANT_BY_NAME";
 export const getAllRestaurants = () => {
   return async function(dispatch){
     try{
-      let json = await axios.get(`http://192.168.100.226:3001/bares`)
+      let json = await axios.get(`/bares`) 
       return dispatch({
         type: GET_ALL_RESTAURANTS,
         payload: json.data
@@ -23,10 +23,9 @@ export const getAllRestaurants = () => {
 export const getRestaurantByName = (name) =>{
   return async function(dispatch){
       try {
-          var json = await axios.get(`http://192.168.100.226:3001/bares?name=${name}`)
+          var json = await axios.get(`/bares?name=${name}`)
           return dispatch({
               type: GET_RESTAURANT_BY_NAME,
-              // payload: json.data
               payload: json.data
           })
       } catch (error) {
@@ -39,7 +38,7 @@ export const getRestaurantByName = (name) =>{
 export const getRestaurantById = (id) =>{
   return async function (dispatch) {
       try {
-          var json = await axios.get(`http://192.168.100.226:3001/${id}`)
+          var json = await axios.get(`/${id}`)
           return dispatch({
               type: GET_RESTAURANT_BY_ID,
               payload: json.data

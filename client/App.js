@@ -6,7 +6,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import BottomTabNav from './src/navigation/BottomTabNav';
 import axios from 'axios';
 
-// axios.defaults.baseURL = "http://localhost:3001/" ; 
+ axios.defaults.baseURL = "http://192.168.100.25:3001" ; 
 
 export default function App() {
   return (

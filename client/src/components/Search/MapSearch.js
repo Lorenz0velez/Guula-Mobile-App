@@ -3,7 +3,7 @@ import MapView, { Marker } from 'react-native-maps';
 import * as Location from 'expo-location';
 import { View, StyleSheet, Text } from 'react-native';
 
-const MapScreenSearch = () => {
+const MapScreenSearch22 = () => {
     const [initialRegion, setInitialRegion] = useState(null);
   
     const getCurrentLocation = async () => {
@@ -56,7 +56,7 @@ const styles = StyleSheet.create({
   },
 });
 
-export default MapScreenSearch;
+export default MapScreenSearch22;
 
 
 // Error using newLatLngBounds(LatLngBounds, int): Map size can't be 0.
